@@ -1,0 +1,220 @@
+﻿
+
+body {
+    margin-top: 60px;
+    padding-bottom: 0px;
+}
+
+.body-content {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+/*   Top nav var   */
+
+.top-nav {
+
+      background: black;
+      height: 30px;
+      color: white;
+      text-align: right;
+      padding-top: 7px;
+      padding-right: 30px;
+      font-size: 12px;
+      font-family: revert;
+
+}
+#phone:hover, #clock:hover {
+
+    color: #ffc000;
+}
+.top-nav i:hover {
+
+    color: #ffc000;
+}
+.social-media-icons {
+
+      margin-top: -6px;
+      float: left;
+
+}
+.social-media-icons a:hover {
+
+  color: #FFC000;
+
+}
+
+
+/*    nav bar   */
+
+
+#top-logo {
+  height: 60px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: 40px;
+}
+.navbar {
+
+    background: #FFFFFF;
+    border-bottom: 2px solid gray;
+}
+.nav {
+
+    padding-left: 70px;
+}
+#home {
+    color: #ffc000;
+}
+.nav li a,#admin {
+
+    font-size: 17px;
+    padding-top: 30px;
+    font-family:monospace;        
+}
+#abouts, #food, #land, #cows, #worker, #contact,#admin {
+
+    color: black;            /*  sing up and sign in design in partial layout page */ 
+}
+#abouts:hover, #food:hover, #land:hover, #cows:hover, #worker:hover, #contact:hover, #admin:hover {
+    color: #ffc000;
+            
+}
+
+
+/*  Bottom Section from here  */
+
+.bottom-section {
+
+    margin-top: 100px;
+}
+.bottom-section-heder {
+
+    background-color:#ffc000;
+    width: 100%;
+    height: auto;
+}
+#bottom-heder-row-id {
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* Botttom Section Body from here  */
+
+.bottom-section-body {
+
+    background: #231F20;
+    width: 100%;
+    height: auto;
+}
+#bottom-section-body-row-id {
+
+    padding-top: 90px;
+}
+.bottom-section-body-heading h1 {
+
+    color: #ffc000;
+    text-align: center;
+    font-size: 60px;
+    margin-top: -15px;
+    font-family: revert;
+}
+.bottom-section-body-heading h5 {
+
+    color: #ffc000;
+    text-align: center;
+}
+.bottom-section-button {
+
+    text-align: center;
+}
+#BottomSectionBodyHedingButton {
+
+    background: none;
+    border: 2px white solid;
+    padding: 15px 35px;
+    color: white;
+    font-family: revert;
+    border-radius: 0px;
+
+}
+#BottomSectionBodyHedingButton:hover {
+
+    border: 2px #ffc000 solid;
+    border-radius: 0px;
+    color: #ffc000;
+    font-family: revert;
+}
+.BottomColumnID {
+
+    margin-right: -30px;
+}
+
+/*  bottom-sectionBodyBodyIteams from here */
+
+.bottom-section-body-body-iteams h1{
+
+    color: #fdc221;
+    font-family: revert;
+    padding-bottom: 15px;
+}
+.bottom-section-body-body-iteams a{
+
+    color: gray;
+    font-family: revert;
+}
+.bottom-section-body-body-iteams a:hover{
+
+    color: #fdc221;
+    font-family: revert;
+}
+.bottom-section-body-body {
+
+    padding-bottom: 70px;
+}
+
+/* bottom-sectionBody Bottom */
+
+.bottom-section-bottom {
+
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.Contact {
+
+    color: gray;
+    font-family: revert;
+}
+.social-media-icon a i {
+
+    font-size: 40px;
+    color: #ffc000;
+    border: 60px;
+}
+.social-media-icon a i:hover {
+
+    color: #339AF0;
+}
+.developer-info {
+
+    background: #181516;
+    width: 100%;
+    height: 80px;
+    margin-top: -50px;
+}
+.developer-info p {
+    text-align: center;
+    padding-top: 30px;
+    color: gray;
+  
+}
+#developer-link {
+
+    color: white;
+}
+#developer-link:hover {
+    color: #fdc221;
+}

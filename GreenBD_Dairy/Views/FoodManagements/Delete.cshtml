@@ -1,0 +1,116 @@
+﻿@using Microsoft.AspNetCore.Http
+@model GreenBD_Dairy.Models.FoodManagement
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<html>
+<head>
+    <link href="~/css/Create-Edit-Delete-StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page-heding">
+        <marquee><p>Hello<span style="color: #ffcc00">! </span> <span style="color: #FFCC00">@@</span><span style="color: #FFCC00"> @Context.Session.GetString("username")</span><span style="color: red">Are you sure to Delete this Record? </span>from Food Management Information</p></marquee>
+    </div>
+    <div class="container">
+        <section>
+            <div class="create-form">
+                <div class="row" id="create-form-id">
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.FoodName)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.FoodName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.FoodType)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.FoodType.FoodTypeName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.FoodForm)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.FoodForm)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ComOrBrndName)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.ComOrBrndName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ShopName)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.ShopName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.NumberOfProduct)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.NumberOfProduct)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.NumberSign)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.NumberSign.NumberSignName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Price)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Price)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.TotalPrice)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.TotalPrice)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.AmountSign)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.AmountSign.AmountSignName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Description)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Description)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ManagerSignature)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.ManagerSignature)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.EntryDate)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.EntryDate)
+                        </dd>
+                    </dl>
+                    <hr />
+                    <div>
+                        <form asp-action="Delete">
+                            <a asp-action="Index" class="btn btn-info">Back to List</a>
+                            <input type="hidden" asp-for="Id" />
+                            <input type="submit" value="Delete" class="btn btn-danger" />
+                        </form>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

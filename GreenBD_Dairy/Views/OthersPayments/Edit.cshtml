@@ -1,0 +1,167 @@
+﻿
+@using Microsoft.AspNetCore.Http
+@model GreenBD_Dairy.Models.OthersPayment
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<html>
+<head>
+    <link href="~/css/Create-Edit-Delete-StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="page-heding">
+        <marquee><p>Careful<span style="color: #ffcc00">! </span> <span style="color: #FFCC00">@@</span><span style="color: #FFCC00"> @Context.Session.GetString("username")</span> for Updating Bill of Others Payment</p></marquee>
+    </div>
+    <div class="container">
+        <section>
+            <div class="create-form">
+                <div class="row" id="create-form-id">
+                    <form asp-action="Create" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="Name" class="control-label"></label>
+                                    <input asp-for="Name" class="form-control" />
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="GenderId" class="control-label"></label>
+                                    <select asp-for="GenderId" class="form-control" asp-items="ViewBag.GenderId">
+                                        <option value=""> ---- Select Gender ---- </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="Country" class="control-label"></label>
+                                    <input asp-for="Country" class="form-control" />
+                                    <span asp-validation-for="Country" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label">NID/Birth/Passport</label>
+                                    <input asp-for="NID" type="file" name="nid" class="form-control" />
+                                    <span asp-validation-for="NID" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="Image" class="control-label"></label>
+                                    <input asp-for="Image" type="file" name="profile" class="form-control" />
+                                    <span asp-validation-for="Image" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="RankId" class="control-label"></label>
+                                    <select asp-for="RankId" class="form-control" asp-items="ViewBag.RankId">
+                                        <option value=""> ---- Select Gender ---- </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="Amount" class="control-label"></label>
+                                    <input asp-for="Amount" class="form-control" />
+                                    <span asp-validation-for="Amount" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="AmountSignId" class="control-label"></label>
+                                    <select asp-for="AmountSignId" class="form-control" asp-items="ViewBag.AmountSignId">
+                                        <option value=""> ---- Select Gender ---- </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="Description" class="control-label"></label>
+                                    <input asp-for="Description" class="form-control" />
+                                    <span asp-validation-for="Description" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="ManagerSignature" class="control-label"></label>
+                                    <input asp-for="ManagerSignature" class="form-control" />
+                                    <span asp-validation-for="ManagerSignature" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="EntryDate" class="control-label"></label>
+                                    <input asp-for="EntryDate" type="text" value="@DateTime.Now" class="form-control" />
+                                    <span asp-validation-for="EntryDate" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+                            </div>
+                        </div>
+                        <br />
+                        <input id="create-btn-right" type="submit" value="Update" class="btn btn-success" />
+                    </form>
+                    <div>
+                        <a asp-action="Index" class="btn btn-info">Back to List</a>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+
+    <script>
+    $(document).ready(function() {
+
+
+        $("#number-of-product").keyup(function() {
+
+            var product =  $("#number-of-product").val();
+            var price = $("#price-id").val();
+            var total = parseFloat(product) * parseFloat(price);
+
+            $("#total-price-id").val(total);
+        });
+        $("#price-id").keyup(function() {
+
+            var product =  $("#number-of-product").val();
+            var price = $("#price-id").val();
+            var total = parseFloat(product) * parseFloat(price);
+
+            $("#total-price-id").val(total);
+        });
+        $("#total-price-id").keyup(function() {
+
+            var product =  $("#number-of-product").val();
+            var price = $("#price-id").val();
+            var total = parseFloat(product) * parseFloat(price);
+
+            $("#total-price-id").val(total);
+        });
+    });
+    </script>
+
+
+</body>
+</html>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

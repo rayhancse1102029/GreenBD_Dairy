@@ -1,0 +1,225 @@
+﻿@{
+    ViewData["Title"] = "About";
+    Layout = "~/Views/Shared/_Layout_ClientSide.cshtml";
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="~/css/About-page-StyleSheet.css" rel="stylesheet" />
+    <link href="~/Animate_css/animate.min.css" rel="stylesheet" />
+    <link href="~/css/Home-Index-StyleSheet.css" rel="stylesheet" />
+    
+</head>
+
+<body>
+
+@*   Top Part   *@
+
+<section>
+    <div class="row">
+        <div class="page-banner img-responsive">
+        </div>
+        <div class="over">
+            <h1>Home / About</h1>
+        </div>
+    </div>
+    <div class="introduction-part">
+        <div id="welcome-message">
+            <h3>Welcome To Our Farm!</h3>
+        </div>
+        <div id="welcome-discription">
+            <img src="~/Images/Cowicon.svg" class="img-responsive"/>
+            <p>
+                Here you will find a wide range of healthy and fresh dairy products that were proudly <br/> produced at our farm by our farmers and cows.<br/> Welcome to Greeen-BD!
+            </p>
+        </div>
+        <div class="big-logo-part">
+            <div>
+                <img id="big-logo" src="~/Images/CowBigLogo.png" class="img-circle"/>
+            </div>
+            <div>
+                <img id="big-logo-text" src="~/Images/blabla0101222.png"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+    @*     Body part   *@
+
+    <section>
+        <div class="body-part">
+            <div class="container">
+                <div class="top-body">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <img src="~/Images/service3.jpg" class="img-responsive" />
+                            <h2><b>Our Dairy Farm</b></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta.</p>
+
+                            <br /><br />
+                            <button class="btn btn-block top-body-button"> Discover History </button>
+
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <img src="~/Images/service2.jpg" class="img-responsive" />
+                            <h2><b>Meet Our Cows</b></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta.</p>
+
+                            <br /><br />
+                            <button class="btn btn-block top-body-button"> View Cows </button>
+
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <img src="~/Images/service1.jpg" class="img-responsive" />
+                            <h2><b>Our Organic Food</b></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta.</p>
+
+                            <br /><br />
+                            <button class="btn btn-block top-body-button" onclick="window.location.href='/SellProduct/ProductAddvertise'"> Shop Now </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @*   Prosuct Us   *@
+
+
+    <section>
+        <div class="products">
+ 
+            <div class="products-bottom">
+                <div class="roducts-bottom-class">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="products-bottom-left-side">
+                                    <img src="~/Images/Productsimage.png" width="75%" class="img-responsive" id="products-bottom-left-side-image-id" alt="image missing" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="products-bottom-right-side">
+                                    <div class="products-bottom-right-side-heding">
+                                        <h1><b> Featured Recipie </b></h1>
+                                        <hr />
+                                        <h3>The Only Ice Cream Recipe <br /> You'll Ever Need</h3>
+                                        <p>
+                                            Although any mammal can produce milk, commercial dairy farms are                  typically one-species enterprises. In developed countries, dairy farms            typically consist of high producing dairy cows. Other species used in             commercial dairy farming include goats, sheep, and camels. Donkeys in              Italy.
+                                        </p>
+                                        <div class="products-bottom-right-side-btn">
+                                            <button class="btn btn-default" id="products-bottom-right-side-btn-id"> <b>READ MORE</b> </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/Animate_css/gulpfile.js"></script>
+    <script src="~/Scroll_Animate/scrollreveal.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+        
+
+            // Scroll Animation
+
+
+            window.sr = ScrollReveal();
+
+            // welcome message part
+
+            sr.reveal('#welcome-message',
+                {
+                    duration: 2000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('#welcome-discription',
+                {
+                    duration: 2000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('#big-logo',
+                {
+                    duration: 2000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('#big-logo-text',
+                {
+                    duration: 2000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+
+            //  Bottom Body image scroll Reveal
+
+            sr.reveal('.bottom-body-left',
+                {
+                    duration: 5000,
+                    origin: 'left',
+                    distance: '400px'
+                });
+            sr.reveal('.bottom-body-right',
+                {
+                    duration: 5000,
+                    origin: 'right',
+                    distance: '400px'
+                });
+
+            //  About Us Section from here
+
+            sr.reveal('.about-us',
+                {
+                    duration: 4000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+
+            // Products Section from here
+
+            sr.reveal('.products',
+                {
+                    duration: 2000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('.products-bottom-left-side',
+                {
+                    duration: 5000,
+                    origin: 'left',
+                    distance: '300px'
+                });
+            sr.reveal('.products-bottom-right-side',
+                {
+                    duration: 5000,
+                    origin: 'right',
+                    distance: '300px'
+                });
+            });
+
+
+
+    </script>
+
+</body>
+
+</html>

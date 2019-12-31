@@ -1,0 +1,103 @@
+﻿
+
+
+.registration {
+    background-image: url('../images/teammembersbackground.jpg');
+    color: rgba(255,255,255,0.9);
+}
+
+.background {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.registration-form-box {
+    background: rgba(0,0,0,0.7);
+    padding: 50px 70px 70px 70px;
+}
+
+.registration-form-box input {
+    background: none;
+    border: 2px solid white;
+    height: 45px;
+    color: white;
+}
+
+.registration-form-box button {
+    height: 45px;
+    background: #1BA8CE;
+    color: white;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.already-account {
+    text-align: center;
+}
+
+.already-account a {
+    color: white;
+    text-decoration: none;
+}
+
+.login {
+    color: #1ba8ce;
+    font-size: 15px;
+    text-decoration-color: white;
+}
+
+.login:hover {
+    color: red;
+}
+
+.left-side {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.left-side h2 {
+    font-size: 70px;
+    color: white;
+}
+
+.left-side p {
+    line-height: 40px;
+    color: rgba(255,255,255,0.8);
+    font-size: 17px;
+}
+
+.advertisement {
+    margin-top: -20px;
+}
+
+.top-part {
+    background: #0092BB;
+    height: 350px;
+}
+
+.top-part h1 {
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+    font-size: 50px;
+}
+
+.white-space {
+    width: 80%;
+    margin-left: 10%;
+    background: white;
+    margin-top: -100px;
+    height: 100px;
+}
+
+#remember-me-id {
+    margin-top: -12px;
+    background: none;
+}
+
+#forgot-password {
+    text-align: center;
+}
+

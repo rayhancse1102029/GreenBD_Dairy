@@ -1,0 +1,985 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_ClientSide.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="~/Animate_css/animate.min.css" rel="stylesheet" />
+    <link href="~/css/Home-Index-StyleSheet.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    @*   Top Part   *@
+
+    <section>
+
+        <div class="Slider">
+            <div id="carousel-example-generic" class="carousel slide custom-carousel" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div class="overlay"></div>
+                        <img src="/Images/Slider/Sliderimage01.jpg" alt="missing one">
+                        <div class="carousel-caption">
+                            <h1 class="animated fadeInUp">
+                                <b>Milk and more!</b>
+                            </h1>
+                            <h3 class="animated fadeInDown">
+                                <b>Fresh.Local.Delivered</b>
+                            </h3>
+                            <button class="btn btn-default animated rotateIn"><b>View Our products!</b></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="overlay"></div>
+                        <img src="~/Images/TeamMembersBackground.jpg" />
+                        <div class="carousel-caption">
+                            <h1 class="animated fadeInLeft">
+                                <b>Creamy Cheese!</b>
+                            </h1>
+                            <h3 class="animated fadeInRight">
+                                <b>Fresh.Local.Delivered</b>
+                            </h3>
+                            <button class="btn btn-default animated rotateIn"><b>View Our products!</b></button>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="overlay"></div>
+                        <img src="/Images/Slider/Sliderimage13.jpg" alt="missing one">
+                        <div class="carousel-caption">
+                            <h1 class="animated fadeInUp">
+                                <b>Ice Creame!</b>
+                            </h1>
+                            <h3 class="animated fadeInDown">
+                                <b>Fresh.Local.Delivered</b>
+                            </h3>
+                            <button class="btn btn-default animated rotateIn"><b>View Our products!</b></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="introduction-part">
+            <div id="welcome-message">
+                <h3>Welcome To Our Farm!</h3>
+            </div>
+            <div id="welcome-discription">
+                <img src="~/Images/Cowicon.svg" class="img-responsive" />
+                <p>
+                    Here you will find a wide range of healthy and fresh dairy products that were proudly <br /> produced at our farm by our farmers and cows.<br /> Welcome to Greeen-BD!
+                </p>
+            </div>
+            <div class="big-logo-part">
+                <div>
+                    <img id="big-logo" src="~/Images/CowBigLogo.png" class="img-circle" />
+                </div>
+                <div>
+                    <img id="big-logo-text" src="~/Images/blabla0101222.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @*     Body part   *@
+
+    <section>
+        <div class="body-part">
+            <div class="container">
+                <div class="top-body">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <img src="~/Images/service3.jpg" class="img-responsive" />
+                            <h2><b>Our Dairy Farm</b></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta.</p>
+
+                            <br /><br />
+                            <button class="btn btn-block top-body-button"> Discover History </button>
+
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <img src="~/Images/service2.jpg" class="img-responsive" />
+                            <h2><b>Meet Our Cows</b></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta.</p>
+
+                            <br /><br />
+                            <button class="btn btn-block top-body-button"> View Cows </button>
+
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <img src="~/Images/service1.jpg" class="img-responsive" />
+                            <h2><b>Our Organic Food</b></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta.</p>
+
+                            <br /><br />
+                            <button class="btn btn-block top-body-button" onclick="window.location.href='/SellProduct/ProductAddvertise'"> Shop Now </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-body-part">
+                <div class="bottom-body-overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="bottom-body-left">
+                                    <h1><b>What's Fresh!</b></h1>
+                                    <h2>
+                                        <b>
+                                            From Our Family
+                                            <br /> to Yours
+                                        </b>
+                                    </h2>
+                                    <p>
+                                        <b>
+                                            Although any mammal can produce milk, commercial dairy farms are typically one-species enterprises. In developed countries, dairy farms typically consist of high producing dairy cows. Other species used in commercial dairy farming include goats, sheep, and camels. Donkeys in Italy.
+                                        </b>
+                                    </p>
+                                    <br /><br />
+
+                                    <button class="btn btn-default" id="bottom-body-left-btn-id" onclick="window.location.href = 'https://stackoverflow.com/'">Read More!</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="bottom-body-right">
+                                    <img src="~/Images/girl.png" width="80%" class="img-responsive" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @*    About Us   *@
+
+    <section>
+        <div class="about-us">
+            <div class="row">
+                <div class="about-us-hedding">
+                    <h1><b>About Us</b></h1>
+                    <img src="~/Images/SmallCowUnderScoreLogo.png" alt="image missing" class="img-responsive" />
+                </div>
+            </div>
+            <div class="container">
+                <div class="about-us-body">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="about-us-cow-img">
+                                <img src="~/Images/AboutUsCowPic.png" class="img-responsive" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="about_us_history">
+                                <div class="history-per-year">
+                                    <br /><br /><br /><br /><br />
+                                    <div class="year">
+                                        <div class="row">
+                                            <button class="btn btn-default" id="yearbtn1"> 2015 </button>
+                                            <button class="btn btn-default" id="yearbtn2"> 2016 </button>
+                                            <button class="btn btn-default" id="yearbtn3"> 2017 </button>
+                                            <button class="btn btn-default" id="yearbtn4"> 2018 </button>
+                                            <button class="btn btn-default" id="yearbtn5"> 2019 </button>
+                                        </div>
+                                    </div>
+                                    <div class="year-wise-discription">
+                                        <div class="row">
+                                            <div class="history-one">
+                                                <h1> <b> Our Story </b> </h1>
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                                            </div>
+                                            <div class="history-two">
+                                                <h1> <b> Starting a Farm </b> </h1>
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                                            </div>
+                                            <div class="history-three">
+                                                <h1> <b> The Best Milk in the State </b> </h1>
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                                            </div>
+                                            <div class="history-four">
+                                                <h1> <b> Store Opening </b> </h1>
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                                            </div>
+                                            <div class="history-five">
+                                                <h1> <b> Online Shop and Shipment </b> </h1>
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="about-us-history-btn">
+                                                <button class="btn btn-default" id="about-us-history-btn-id" onclick="window.location.href='#'"> <b>READ MORE</b> </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @*   Prosuct Us   *@
+
+
+    <section>
+        <div class="products">
+            <div class="container">
+                <div class="products-heder">
+                    <div class="row">
+                        <h1>
+                            <b> Products </b>
+                        </h1>
+                        <img src="~/Images/SmallCowUnderScoreLogo.png" class="img-responsive" />
+                    </div>
+                </div>
+                <div class="products-body">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="products-body-iteam">
+                                <img src="~/Images/img_milk.jpg" class="img-responsive img-circle" alt="image missing" />
+                                <h1>
+                                    <b>Milk</b>
+                                </h1>
+                                <p>Dairy farming’s been part of agriculture for thousands of years.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="products-body-iteam">
+                                <img src="~/Images/img_cheese.jpg" class="img-responsive img-circle" alt="image missing" />
+                                <h1>
+                                    <b>Cheese</b>
+                                </h1>
+                                <p>Dairy farming’s been part of agriculture for thousands of years.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="products-body-iteam">
+                                <img src="~/Images/img_butter.jpg" class="img-responsive img-circle" alt="image missing" />
+                                <h1>
+                                    <b>Butter</b>
+                                </h1>
+                                <p>Dairy farming’s been part of agriculture for thousands of years.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="products-body-iteam">
+                                <img src="~/Images/img_cream.jpg" class="img-responsive img-circle" alt="image missing" />
+                                <h1>
+                                    <b>Cream</b>
+                                </h1>
+                                <p>Dairy farming’s been part of agriculture for thousands of years.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products-view-more-btn">
+                    <div class="row">
+                        <button class="btn btn-default" id="products-view-more-btn-id" onclick="window.location.href = '#'">
+                            <b>VIEW ALL PRODUCTS</b>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="products-bottom">
+                <div class="roducts-bottom-class">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="products-bottom-left-side">
+                                    <img src="~/Images/Productsimage.png" width="75%" class="img-responsive" id="products-bottom-left-side-image-id" alt="image missing" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="products-bottom-right-side">
+                                    <div class="products-bottom-right-side-heding">
+                                        <h1><b> Featured Recipie </b></h1>
+                                        <hr />
+                                        <h3>The Only Ice Cream Recipe <br /> You'll Ever Need</h3>
+                                        <p>
+                                            Although any mammal can produce milk, commercial dairy farms are                  typically one-species enterprises. In developed countries, dairy farms            typically consist of high producing dairy cows. Other species used in             commercial dairy farming include goats, sheep, and camels. Donkeys in              Italy.
+                                        </p>
+                                        <div class="products-bottom-right-side-btn">
+                                            <button class="btn btn-default" id="products-bottom-right-side-btn-id"> <b>READ MORE</b> </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @*   Our shop  *@
+
+
+<section>
+    <div class="our-shop">
+        <div class="container">
+            <div class="our-shop-heder">
+                <div class="row">
+                    <h1><b> Our Shop </b></h1>
+                    <img src="~/Images/SmallCowUnderScoreLogo.png" class="img-responsive" />
+                </div>
+            </div>
+            <div class="our-shop-body">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <div class="product-item" id="product-item-id-one">
+                            <img src="~/Images/product-1.jpg" id="product-item-img-one" class="img-responsive" width="100%" alt="product image missing" />
+                            <p>
+                                <b> Pecorino Romano </b>
+                            </p>
+                            <h1>
+                                <b> $18.90 – $38.00 </b>
+                            </h1>
+                            <button class="btn btn-default" id="product-item-btn-one"> <b> SELECT OPTIONS </b> </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <div class="product-item" id="product-item-id-two">
+                            <img src="~/Images/product-2.jpg" class="img-responsive" width="100%" alt="product image missing" />
+                            <p>
+                                <b> Evaporated Milk </b>
+                            </p>
+                            <h1>
+                                <b> $4.90 – $8.99 </b>
+                            </h1>
+                            <button class="btn btn-default" id="product-item-btn-id-two"> <b> SELECT OPTIONS </b> </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <div class="product-item" id="product-item-id-three">
+                            <img src="~/Images/product-3.jpg" class="img-responsive" width="100%" alt="product image missing" />
+                            <p>
+                                <b> Farm Sour Cream </b>
+                            </p>
+                            <h1>
+                                <b> $12.50 – $29.00 </b>
+                            </h1>
+                            <button class="btn btn-default" id="product-item-btn-id-three"> <b> SELECT OPTIONS </b> </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <div class="product-item" id="product-item-id-four">
+                            <img src="~/Images/product-4.jpg" class="img-responsive" width="100%" alt="product image missing" />
+                            <p>
+                                <b> Ricotta Salata </b>
+                            </p>
+                            <h1>
+                                <b> $15.99 – $68.99 </b>
+                            </h1>
+                            <button class="btn btn-default" id="product-item-btn-id-four"> <b> SELECT OPTIONS </b> </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="our-shop-bottom">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="content-one">
+                            <img src="~/Images/Breakfast.jpg" class="img-responsive" />
+                            <div class="overlay-one">
+                                <h3><b> Breakfast Ideas </b></h3>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <hr />
+                                <br />
+                                <p>
+                                    Heat up your mornings with a bowl of warm cereal. Whether you              prefer oatmeal, farina, or any other kind of porridge, make your           instant version a bit creamier!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="content-one">
+                            <img src="~/Images/Espicial Food iteam.jpg" class="img-responsive" />
+                            <div class="overlay-one">
+                                <h3><b> Espicial Iteams </b></h3>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star " aria-hidden="true"></i>
+                                <hr />
+                                <br />
+                                <p>
+                                    Try our low fat, fruitty, caramel, vanilla and chocolate ice               cream all made by our best farm cooks!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="content-one">
+                            <img src="~/Images/ice Cream.jpg" class="img-responsive" />
+                            <div class="overlay-one">
+                                <h3><b> Ice Cream </b></h3>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star " aria-hidden="true"></i>
+                                <i class="fa fa-star " aria-hidden="true"></i>
+                                <hr />
+                                <br />
+                                <p>
+                                    Try our low fat, fruitty, caramel, vanilla and chocolate ice               cream all made by our best farm cooks!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="content-one">
+                            <img src="~/Images/Breakfast.jpg" class="img-responsive" />
+                            <div class="overlay-one">
+                                <h3><b> Breakfast Ideas </b></h3>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <hr />
+                                <br />
+                                <p>
+                                    Heat up your mornings with a bowl of warm cereal. Whether you              prefer oatmeal, farina, or any other kind of porridge, make your           instant version a bit creamier!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="content-one">
+                            <img src="~/Images/Espicial Food iteam.jpg" class="img-responsive" />
+                            <div class="overlay-one">
+                                <h3><b> Espicial Iteams </b></h3>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star " aria-hidden="true"></i>
+                                <hr />
+                                <br />
+                                <p>
+                                    Try our low fat, fruitty, caramel, vanilla and chocolate ice               cream all made by our best farm cooks!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="content-one">
+                            <img src="~/Images/ice Cream.jpg" class="img-responsive" />
+                            <div class="overlay-one">
+                                <h3><b> Ice Cream </b></h3>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                <i class="fa fa-star " aria-hidden="true"></i>
+                                <i class="fa fa-star " aria-hidden="true"></i>
+                                <hr />
+                                <br />
+                                <p>
+                                    Try our low fat, fruitty, caramel, vanilla and chocolate ice               cream all made by our best farm cooks!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*   Team Group  *@
+
+<section>
+    <div class="team-group">
+        <div class="team-group-heder">
+            <div class="row">
+                <h1><b> Team </b></h1>
+                <img src="~/Images/SmallCowUnderScoreLogo.png" class="img-responsive" />
+            </div>
+        </div>
+        <div class="team-group-body">
+            <div class="team-group-body-class">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="team-member-profile" id="team-member-profile-id-one">
+                                <div class="content-two">
+                                    <img src="~/Images/team-2.jpg" class="img-responsive img-circle" />
+                                    <div class="overlay-two">
+                                        <a asp-controller="" asp-action=""><i class="fab fa-twitter"></i></a>
+                                        <a class="facebook" asp-controller="" asp-action=""><i class="fab fa-facebook-f"></i></a>
+                                        <a asp-controller="" asp-action=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                                <h3>
+                                    <b> Bobby Young </b>
+                                </h3>
+                                <p>
+                                    <b> A Tractor <br/> Driver </b>
+                                </p>
+                                <button class="btn btn-default" id="team-member-profile-btn-id-one">
+                                    <b> READ MORE </b>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="team-member-profile" id="team-member-profile-id-two">
+                                <div class="content-two">
+                                    <img src="~/Images/team-4.jpg" class="img-responsive img-circle" />
+                                    <div class="overlay-two">
+                                        <a asp-controller="" asp-action=""><i class="fab fa-twitter"></i></a>
+                                        <a class="facebook" asp-controller="" asp-action=""><i class="fab fa-facebook-f"></i></a>
+                                        <a asp-controller="" asp-action=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                                <h3>
+                                    <b> Jose Morrison </b>
+                                </h3>
+                                <p>
+                                    <b> A Business<br /> Owner </b>
+                                </p>
+                                <button class="btn btn-default" id="team-member-profile-btn-id-two">
+                                    <b> READ MORE </b>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="team-member-profile" id="team-member-profile-id-three">
+                                <div class="content-two">
+                                    <img src="~/Images/team-3.jpg" class="img-responsive img-circle" />
+                                    <div class="overlay-two">
+                                        <a asp-controller="" asp-action=""><i class="fab fa-twitter"></i></a>
+                                        <a class="facebook" asp-controller="" asp-action=""><i class="fab fa-facebook-f"></i></a>
+                                        <a asp-controller="" asp-action=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                                <h3>
+                                    <b> Laura Smith </b>
+                                </h3>
+                                <p>
+                                    <b> A Chief <br /> Accountant </b>
+                                </p>
+                                <button class="btn btn-default" id="team-member-profile-btn-id-three">
+                                    <b> READ MORE </b>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="team-member-profile" id="team-member-profile-id-four">
+                                <div class="content-two">
+                                    <img src="~/Images/team-1.jpg" class="img-responsive img-circle" />
+                                    <div class="overlay-two">
+                                        <a asp-controller="" asp-action=""><i class="fab fa-twitter"></i></a>
+                                        <a class="facebook" asp-controller="" asp-action=""><i class="fab fa-facebook-f"></i></a>
+                                        <a asp-controller="" asp-action=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                                <h3>
+                                    <b> Tyler Holland </b>
+                                </h3>
+                                <p>
+                                    <b> Our Only <br /> Marketer </b>
+                                </p>
+                                <button class="btn btn-default" id="team-member-profile-btn-id-four">
+                                    <b> READ MORE </b>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*   blogs  *@
+
+<section>
+        <div class="blogs">
+            <div class="blogs-heder">
+                <div class="row">
+                    <h1> <b> Blogs </b> </h1>
+                    <img src="~/Images/SmallCowUnderScoreLogo.png" />
+                </div>
+            </div>
+            <div class="blogs-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" id="blogs-body-items-col-one">
+                            <div class="content-one">
+                                <img src="~/Images/post-4.jpg" class="img-responsive"/>
+                                <div class="overlay-one">
+                                    <h3><b> Ice Cream </b></h3>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <hr />
+                                    <br />
+                                    <p>
+                                        Try our low fat, fruitty, caramel, vanilla and chocolate ice               cream all made by our best farm cooks!
+                                    </p>
+                                </div>
+                            </div>
+                            <br /><br />
+                            <div class="blogs-body-item-text" style="text-align: center">
+                                <h5> <b> AUGUST 23, 2016 </b></h5>
+                                <h2><b> It Was Delicious </b></h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta.
+                                </p>
+                            </div>
+                            <div class="blogs-body-item-font-awsome">
+
+                                <a> <i class="fas fa-user-circle"></i> Abu Rayhan </a> &nbsp;&nbsp;&nbsp;&nbsp;
+                                <a> <i class="fas fa-eye"></i> 256 </a>&nbsp;&nbsp;
+                                <a> <i class="fas fa-comment"></i> 98 </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" id="blogs-body-items-col-two">
+                            <div class="content-one">
+                                <img src="~/Images/post-5.jpg" class="img-responsive" />
+                                <div class="overlay-one">
+                                    <h3><b> Ice Cream </b></h3>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star " aria-hidden="true"></i>
+                                    <hr />
+                                    <br />
+                                    <p>
+                                        Try our low fat, fruitty, caramel, vanilla and chocolate ice               cream all made by our best farm cooks!
+                                    </p>
+                                </div>
+                            </div>
+                            <br /><br />
+                            <div class="blogs-body-item-text" style="text-align: center">
+                                <h5> <b> AUGUST 23, 2016 </b></h5>
+                                <h2><b> It Was Delicious </b></h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta.
+                                </p>
+                            </div>
+                            <div class="blogs-body-item-font-awsome">
+
+                                <a> <i class="fas fa-user-circle"></i> Abu Rayhan </a> &nbsp;&nbsp;&nbsp;&nbsp;
+                                <a> <i class="fas fa-eye"></i> 256 </a>&nbsp;&nbsp;
+                                <a> <i class="fas fa-comment"></i> 98 </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" id="blogs-body-items-col-three">
+                            <div class="content-one">
+                                <img src="~/Images/post-6.jpg" class="img-responsive"/>
+                                <div class="overlay-one">
+                                    <h3><b> Ice Cream </b></h3>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star " aria-hidden="true"></i>
+                                    <i class="fa fa-star " aria-hidden="true"></i>
+                                    <hr />
+                                    <br />
+                                    <p>
+                                        Try our low fat, fruitty, caramel, vanilla and chocolate ice               cream all made by our best farm cooks!
+                                    </p>
+                                </div>
+                            </div>
+                            <br /><br />
+                            <div class="blogs-body-item-text" style="text-align: center">
+                                <h5> <b> AUGUST 23, 2016 </b></h5>
+                                <h2><b> It Was Delicious </b></h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta.
+                                </p>
+                            </div>
+                            <div class="blogs-body-item-font-awsome">
+
+                                <a> <i class="fas fa-user-circle"></i> Abu Rayhan </a> &nbsp;&nbsp;&nbsp;&nbsp;
+                                <a> <i class="fas fa-eye"></i> 256 </a>&nbsp;&nbsp;
+                                <a> <i class="fas fa-comment"></i> 98 </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="blogs-fotter-btn">
+                            <button class="btn btn-default" id="blogs-fotter-btn-id">
+                                <b> READ  ALL  POSTS </b>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/Animate_css/gulpfile.js"></script>
+    <script src="~/Scroll_Animate/scrollreveal.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+
+            //  about us part from here
+
+
+            $("#yearbtn1").click(function () {
+                $(".history-two").hide();
+                $(".history-three").hide();
+                $(".history-four").hide();
+                $(".history-five").hide();
+                $(".history-one").show();
+            });
+            $("#yearbtn2").click(function () {
+
+                $(".history-one").hide();
+                $(".history-three").hide();
+                $(".history-four").hide();
+                $(".history-five").hide();
+                $(".history-two").show();
+            });
+            $("#yearbtn3").click(function () {
+
+                $(".history-one").hide();
+                $(".history-two").hide();
+                $(".history-four").hide();
+                $(".history-five").hide();
+                $(".history-three").show();
+
+            });
+            $("#yearbtn4").click(function () {
+
+                $(".history-one").hide();
+                $(".history-two").hide();
+                $(".history-three").hide();
+                $(".history-five").hide();
+                $(".history-four").show();
+
+            });
+            $("#yearbtn5").click(function () {
+
+                $(".history-one").hide();
+                $(".history-two").hide();
+                $(".history-three").hide();
+                $(".history-four").hide();
+                $(".history-five").show();
+
+            });
+
+
+
+            // Scroll Animation
+
+
+            window.sr = ScrollReveal();
+
+            // welcome message part
+
+            sr.reveal('#welcome-message',
+                {
+                    duration: 2000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('#welcome-discription',
+                {
+                    duration: 2000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('#big-logo',
+                {
+                    duration: 2000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('#big-logo-text',
+                {
+                    duration: 2000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+
+            //  Bottom Body image scroll Reveal
+
+            sr.reveal('.bottom-body-left',
+                {
+                    duration: 5000,
+                    origin: 'left',
+                    distance: '400px'
+                });
+            sr.reveal('.bottom-body-right',
+                {
+                    duration: 5000,
+                    origin: 'right',
+                    distance: '400px'
+                });
+
+            //  About Us Section from here
+
+            sr.reveal('.about-us',
+                {
+                    duration: 4000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+
+            // Products Section from here
+
+            sr.reveal('.products',
+                {
+                    duration: 2000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('.products-bottom-left-side',
+                {
+                    duration: 5000,
+                    origin: 'left',
+                    distance: '300px'
+                });
+            sr.reveal('.products-bottom-right-side',
+                {
+                    duration: 5000,
+                    origin: 'right',
+                    distance: '300px'
+                });
+
+            //   Our Shop Section from here   product-item
+
+
+            sr.reveal('#product-item-id-one',
+                {
+                    duration: 2000,
+                    origin: 'right',
+                    distance: '300px'
+                });
+            sr.reveal('#product-item-id-two',
+                {
+                    duration: 2000,
+                    origin: 'top',
+                    distance: '300px'
+                });
+            sr.reveal('#product-item-id-three',
+                {
+                    duration: 2000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('#product-item-id-four',
+                {
+                    duration: 2000,
+                    origin: 'left',
+                    distance: '300px'
+                });
+
+            // Group Team Member Section from here
+
+            sr.reveal('.team-group',
+                {
+                    duration: 4000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('#team-member-profile-id-one',
+                {
+                    duration: 5000,
+                    origin: 'left',
+                    distance: '300px'
+                });
+            sr.reveal('#team-member-profile-id-two',
+                {
+                    duration: 5000,
+                    origin: 'top',
+                    distance: '300px'
+                });
+            sr.reveal('#team-member-profile-id-three',
+                {
+                    duration: 5000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('#team-member-profile-id-four',
+                {
+                    duration: 5000,
+                    origin: 'right',
+                    distance: '300px'
+                });
+
+            //  blogs Section from here
+
+            sr.reveal('.blogs',
+                {
+                    duration: 3000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('.blogs-heder',
+                {
+                    duration: 4000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('#blogs-body-items-col-one',
+                {
+                    duration: 4000,
+                    origin: 'left',
+                    distance: '300px'
+                });
+            sr.reveal('#blogs-body-items-col-two',
+                {
+                    duration: 4000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('#blogs-body-items-col-three',
+                {
+                    duration: 4000,
+                    origin: 'right',
+                    distance: '300px'
+                });
+
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

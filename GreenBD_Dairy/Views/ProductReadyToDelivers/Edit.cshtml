@@ -1,0 +1,104 @@
+﻿@using Microsoft.AspNetCore.Http
+@model GreenBD_Dairy.Models.ProductReadyToDeliver
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<html>
+<head>
+    <link href="~/css/Create-Edit-Delete-StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="page-heding">
+        <marquee><p>Careful<span style="color: #ffcc00">! </span> <span style="color: #FFCC00">@@</span><span style="color: #FFCC00"> @Context.Session.GetString("username")</span> for updating Delivered Product Information</p></marquee>
+    </div>
+    <div class="container">
+        <section>
+            <div class="create-form">
+                <div class="row" id="create-form-id">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id"/>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="ProductTypeId" class="control-label"></label>
+                                    <select asp-for="ProductTypeId" class="form-control" asp-items="ViewBag.ProductTypeId">
+                                        <option value="">----Select Product Type----</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="ProductName" class="control-label"></label>
+                                    <input asp-for="ProductName" class="form-control" />
+                                    <span asp-validation-for="ProductName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="ProductQualityId" class="control-label"></label>
+                                    <select asp-for="ProductQualityId" class="form-control" asp-items="ViewBag.ProductQualityId">
+                                        <option value="">----Select product Quality----</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="NumberOfProduct" class="control-label"></label>
+                                    <input asp-for="NumberOfProduct" class="form-control" />
+                                    <span asp-validation-for="NumberOfProduct" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="NumberSignId" class="control-label"></label>
+                                    <select asp-for="NumberSignId" class="form-control" asp-items="ViewBag.NumberSignId">
+                                        <option value="">----Select Number Sign----</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="WorkerSignature" class="control-label"></label>
+                                    <input asp-for="WorkerSignature" class="form-control" />
+                                    <span asp-validation-for="WorkerSignature" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="EntryDate" class="control-label"></label>
+                                    <input asp-for="EntryDate" type="text" value="@DateTime.Now" class="form-control" />
+                                    <span asp-validation-for="EntryDate" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+                            </div>
+                        </div>
+                        <input type="submit" id="create-btn-right" value="Create" class="btn btn-success" />
+                    </form>
+                    <br />
+                    <div>
+                        <a asp-action="Index" class="btn btn-info">Back to List</a>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

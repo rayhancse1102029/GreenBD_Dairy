@@ -1,0 +1,134 @@
+﻿
+@using Microsoft.AspNetCore.Http
+@model GreenBD_Dairy.Models.WorkerSalary
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<html>
+<head>
+    <link href="~/css/Create-Edit-Delete-StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="page-heding">
+        <marquee><p>Welcome<span style="color: #ffcc00">! </span> <span style="color: #FFCC00">@@</span><span style="color: #FFCC00"> @Context.Session.GetString("username")</span> for Creating a new Bill for Worker Salary</p></marquee>
+    </div>
+    <div class="container">
+        <section>
+            <div class="create-form">
+                <div class="row" id="create-form-id">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="IdCardNumber" class="control-label"></label>
+                                    <input type="text" asp-for="IdCardNumber" class="form-control" />
+                                    <span asp-validation-for="IdCardNumber" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="RankId" class="control-label"></label>
+                                    <select asp-for="RankId" class="form-control" asp-items="ViewBag.RankId"></select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="Salary" class="control-label"></label>
+                                    <input asp-for="Salary" class="form-control" />
+                                    <span asp-validation-for="Salary" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="MonthId" class="control-label"></label>
+                                    <select asp-for="MonthId" class="form-control" asp-items="ViewBag.MonthId"></select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="PaymentMethodId" class="control-label"></label>
+                                    <select asp-for="PaymentMethodId" class="form-control" asp-items="ViewBag.PaymentMethodId"></select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="ManagerSignature" class="control-label"></label>
+                                    <input type="text" value="@Context.Session.GetString("username")" asp-for="ManagerSignature" class="form-control"/>
+                                    <span asp-validation-for="ManagerSignature" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="EntryDate" class="control-label"></label>
+                                    <input type="text" value="@DateTime.Now" asp-for="EntryDate" class="form-control"/>
+                                    <span asp-validation-for="EntryDate" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+                            </div>
+                        </div>
+                        <br/>
+                        <input id="create-btn-right" type="submit" value="Create" class="btn btn-success"/>
+                    </form>
+                    <div>
+                        <a asp-action="Index" class="btn btn-info">Back to List</a>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+
+            $("#number-of-product").keyup(function () {
+
+                var product = $("#number-of-product").val();
+                var price = $("#price-id").val();
+                var total = parseFloat(product) * parseFloat(price);
+
+                $("#total-price-id").val(total);
+            });
+            $("#price-id").keyup(function () {
+
+                var product = $("#number-of-product").val();
+                var price = $("#price-id").val();
+                var total = parseFloat(product) * parseFloat(price);
+
+                $("#total-price-id").val(total);
+            });
+            $("#total-price-id").keyup(function () {
+
+                var product = $("#number-of-product").val();
+                var price = $("#price-id").val();
+                var total = parseFloat(product) * parseFloat(price);
+
+                $("#total-price-id").val(total);
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

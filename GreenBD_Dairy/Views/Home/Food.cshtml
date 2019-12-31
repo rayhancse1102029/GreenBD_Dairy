@@ -1,0 +1,327 @@
+﻿
+@{
+    ViewData["Title"] = "Food";
+    Layout = "~/Views/Shared/_Layout_ClientSide.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="~/css/About-page-StyleSheet.css" rel="stylesheet" />
+    <link href="~/Animate_css/animate.min.css" rel="stylesheet" />
+    <link href="~/css/Home-Index-StyleSheet.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    @*   Our shop  *@
+<div class="row">
+    <div class="page-banner img-responsive">
+    </div>
+    <div class="over">
+        <h1>Home / Food</h1>
+    </div>
+</div>
+
+    <section>
+        <div class="our-shop">
+            <div class="container">
+                <div class="our-shop-heder">
+                    <div class="row">
+                        <h1><b> Our Shop </b></h1>
+                        <img src="~/Images/SmallCowUnderScoreLogo.png" class="img-responsive" />
+                    </div>
+                </div>
+                <div class="our-shop-body">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="product-item" id="product-item-id-one">
+                                <img src="~/Images/product-1.jpg" id="product-item-img-one" class="img-responsive" width="100%" alt="product image missing" />
+                                <p>
+                                    <b> Pecorino Romano </b>
+                                </p>
+                                <h1>
+                                    <b> $18.90 – $38.00 </b>
+                                </h1>
+                                <button class="btn btn-default" id="product-item-btn-one"> <b> SELECT OPTIONS </b> </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="product-item" id="product-item-id-two">
+                                <img src="~/Images/product-2.jpg" class="img-responsive" width="100%" alt="product image missing" />
+                                <p>
+                                    <b> Evaporated Milk </b>
+                                </p>
+                                <h1>
+                                    <b> $4.90 – $8.99 </b>
+                                </h1>
+                                <button class="btn btn-default" id="product-item-btn-id-two"> <b> SELECT OPTIONS </b> </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="product-item" id="product-item-id-three">
+                                <img src="~/Images/product-3.jpg" class="img-responsive" width="100%" alt="product image missing" />
+                                <p>
+                                    <b> Farm Sour Cream </b>
+                                </p>
+                                <h1>
+                                    <b> $12.50 – $29.00 </b>
+                                </h1>
+                                <button class="btn btn-default" id="product-item-btn-id-three"> <b> SELECT OPTIONS </b> </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="product-item" id="product-item-id-four">
+                                <img src="~/Images/product-4.jpg" class="img-responsive" width="100%" alt="product image missing" />
+                                <p>
+                                    <b> Ricotta Salata </b>
+                                </p>
+                                <h1>
+                                    <b> $15.99 – $68.99 </b>
+                                </h1>
+                                <button class="btn btn-default" id="product-item-btn-id-four"> <b> SELECT OPTIONS </b> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="our-shop-bottom">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="content-one">
+                                <img src="~/Images/Breakfast.jpg" class="img-responsive" />
+                                <div class="overlay-one">
+                                    <h3><b> Breakfast Ideas </b></h3>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <hr />
+                                    <br />
+                                    <p>
+                                        Heat up your mornings with a bowl of warm cereal. Whether you              prefer oatmeal, farina, or any other kind of porridge, make your           instant version a bit creamier!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="content-one">
+                                <img src="~/Images/Espicial Food iteam.jpg" class="img-responsive" />
+                                <div class="overlay-one">
+                                    <h3><b> Espicial Iteams </b></h3>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star " aria-hidden="true"></i>
+                                    <hr />
+                                    <br />
+                                    <p>
+                                        Try our low fat, fruitty, caramel, vanilla and chocolate ice               cream all made by our best farm cooks!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="content-one">
+                                <img src="~/Images/ice Cream.jpg" class="img-responsive" />
+                                <div class="overlay-one">
+                                    <h3><b> Ice Cream </b></h3>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star " aria-hidden="true"></i>
+                                    <i class="fa fa-star " aria-hidden="true"></i>
+                                    <hr />
+                                    <br />
+                                    <p>
+                                        Try our low fat, fruitty, caramel, vanilla and chocolate ice               cream all made by our best farm cooks!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="content-one">
+                                <img src="~/Images/Breakfast.jpg" class="img-responsive" />
+                                <div class="overlay-one">
+                                    <h3><b> Breakfast Ideas </b></h3>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <hr />
+                                    <br />
+                                    <p>
+                                        Heat up your mornings with a bowl of warm cereal. Whether you              prefer oatmeal, farina, or any other kind of porridge, make your           instant version a bit creamier!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="content-one">
+                                <img src="~/Images/Espicial Food iteam.jpg" class="img-responsive" />
+                                <div class="overlay-one">
+                                    <h3><b> Espicial Iteams </b></h3>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star " aria-hidden="true"></i>
+                                    <hr />
+                                    <br />
+                                    <p>
+                                        Try our low fat, fruitty, caramel, vanilla and chocolate ice               cream all made by our best farm cooks!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="content-one">
+                                <img src="~/Images/ice Cream.jpg" class="img-responsive" />
+                                <div class="overlay-one">
+                                    <h3><b> Ice Cream </b></h3>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star chaked" aria-hidden="true"></i>
+                                    <i class="fa fa-star " aria-hidden="true"></i>
+                                    <i class="fa fa-star " aria-hidden="true"></i>
+                                    <hr />
+                                    <br />
+                                    <p>
+                                        Try our low fat, fruitty, caramel, vanilla and chocolate ice               cream all made by our best farm cooks!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/Animate_css/gulpfile.js"></script>
+    <script src="~/Scroll_Animate/scrollreveal.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+
+            // Scroll Animation
+
+
+            window.sr = ScrollReveal();
+
+           //   Our Shop Section from here   product-item
+
+
+            sr.reveal('#product-item-id-one',
+                {
+                    duration: 2000,
+                    origin: 'right',
+                    distance: '300px'
+                });
+            sr.reveal('#product-item-id-two',
+                {
+                    duration: 2000,
+                    origin: 'top',
+                    distance: '300px'
+                });
+            sr.reveal('#product-item-id-three',
+                {
+                    duration: 2000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('#product-item-id-four',
+                {
+                    duration: 2000,
+                    origin: 'left',
+                    distance: '300px'
+                });
+
+            // Group Team Member Section from here
+
+            sr.reveal('.team-group',
+                {
+                    duration: 4000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('#team-member-profile-id-one',
+                {
+                    duration: 5000,
+                    origin: 'left',
+                    distance: '300px'
+                });
+            sr.reveal('#team-member-profile-id-two',
+                {
+                    duration: 5000,
+                    origin: 'top',
+                    distance: '300px'
+                });
+            sr.reveal('#team-member-profile-id-three',
+                {
+                    duration: 5000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('#team-member-profile-id-four',
+                {
+                    duration: 5000,
+                    origin: 'right',
+                    distance: '300px'
+                });
+
+            //  blogs Section from here
+
+            sr.reveal('.blogs',
+                {
+                    duration: 3000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('.blogs-heder',
+                {
+                    duration: 4000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('#blogs-body-items-col-one',
+                {
+                    duration: 4000,
+                    origin: 'left',
+                    distance: '300px'
+                });
+            sr.reveal('#blogs-body-items-col-two',
+                {
+                    duration: 4000,
+                    origin: 'bottom',
+                    distance: '300px'
+                });
+            sr.reveal('#blogs-body-items-col-three',
+                {
+                    duration: 4000,
+                    origin: 'right',
+                    distance: '300px'
+                });
+
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,56 @@
+﻿@using Microsoft.AspNetCore.Http
+@model GreenBD_Dairy.Models.AmountSign
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<html>
+<head>
+    <link href="~/css/Create-Edit-Delete-StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+<div class="page-heding">
+    <marquee><p>Hello<span style="color: #ffcc00">! </span> <span style="color: #FFCC00">@@</span><span style="color: #FFCC00"> @Context.Session.GetString("username")</span><span style="color: red"> Are you sure to Delete this Record? </span> from Amount Sign</p></marquee>
+</div>
+<div class="container">
+    <section>
+        <div class="create-form">
+            <div class="row" id="create-form-id">
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.AmountSignName)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.AmountSignName)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.OwnerSignature)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.OwnerSignature)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EntryDate)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.EntryDate)
+                    </dd>
+                </dl>
+                <hr />
+                <div>
+                    <form asp-action="Delete">
+                        <a asp-action="Index" class="btn btn-info">Back to List</a>
+                        <input type="hidden" asp-for="AmountSignId" />
+                        <input type="submit" value="Delete" class="btn btn-danger" />
+                    </form>
+                </div>
+                <br />
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+﻿@using Microsoft.AspNetCore.Http
+@model GreenBD_Dairy.Models.FoodType
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<html>
+<head>
+    <link href="~/css/Create-Edit-Delete-StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="page-heding">
+        <marquee><p>Welcome<span style="color: #ffcc00">! </span> <span style="color: #FFCC00">@@</span><span style="color: #FFCC00"> @Context.Session.GetString("username")</span> for Creating a new Food Type Item</p></marquee>
+    </div>
+    <div class="container">
+        <section>
+            <div class="create-form">
+                <div class="row" id="create-form-id">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="FoodTypeName" class="control-label"></label>
+                                    <input asp-for="FoodTypeName" class="form-control" />
+                                    <span asp-validation-for="FoodTypeName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="Description" class="control-label"></label>
+                                    <input asp-for="Description" class="form-control" />
+                                    <span asp-validation-for="Description" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="OwnerSignature" class="control-label"></label>
+                                    <input type="text" value="@Context.Session.GetString("username")" asp-for="OwnerSignature" class="form-control" />
+                                    <span asp-validation-for="OwnerSignature" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="EntryDate" class="control-label"></label>
+                                    <input type="text" value="@DateTime.Now" asp-for="EntryDate" class="form-control" />
+                                    <span asp-validation-for="EntryDate" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+                            </div>
+                        </div>
+                        <br/>
+                        <input type="submit" value="Create" id="create-btn-right" class="btn btn-success" />
+                    </form>
+                    <div>
+                        <a asp-action="Index" class="btn btn-info">Back to List</a>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

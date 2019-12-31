@@ -1,0 +1,65 @@
+﻿@using Microsoft.AspNetCore.Http
+@model GreenBD_Dairy.Models.Transport
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<html>
+<head>
+    <link href="~/css/Create-Edit-Delete-StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page-heding">
+        <marquee><p>Thanks<span style="color: #ffcc00">! </span> <span style="color: #FFCC00">@@</span><span style="color: #FFCC00"> @Context.Session.GetString("username")</span> for Reading Transport Information </p></marquee>
+    </div>
+    <div class="container">
+        <section>
+            <div class="create-form">
+                <div class="row" id="create-form-id">
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.TransportType)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.TransportType.TransportTypeName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.UsesFor)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.UsesFor)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Description)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Description)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ManagerSignature)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.ManagerSignature)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.EntryDate)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.EntryDate)
+                        </dd>
+                    </dl>
+                    <hr />
+                    <div>
+                        <a asp-action="Index" class="btn btn-info">Back to List</a>
+                        <a asp-action="Edit" class="btn btn-danger" asp-route-id="@Model.Id">Edit</a>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

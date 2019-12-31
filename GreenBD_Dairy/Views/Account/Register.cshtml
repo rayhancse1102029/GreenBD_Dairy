@@ -1,0 +1,87 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout_ClientSide.cshtml";
+}
+
+<html>
+<head>
+    
+    <link href="~/css/Registration-and-Login-StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+<section>
+    <div class="registration">
+        <div class="background">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                        <div class="left-side">
+                            <h2>Welcome To GreenBD </h2>
+                            <br/><br/><br/>
+                            <p>123FormBuilder provides all the tools you need to make any type of registration form, without coding skills, as easy as 1-2-3. 
+
+                                Our online form builder offers a simple, convenient way to let participants to register for any type of event, conference and more. Sign up for FREE to start building your event registration forms now!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                        <div class="right-side">
+                            <div class="registration-form-box">
+                                <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
+                                    <h2>Create a new account.</h2>
+                                    <hr /><br/>
+                                    <div asp-validation-summary="All" class="text-danger"></div>
+                                    <div class="form-group">
+                                        <label asp-for="Email"></label>
+                                        <input name="username" asp-for="Email" class="form-control"/>
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Password"></label>
+                                        <input asp-for="Password" class="form-control" />
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="ConfirmPassword"></label>
+                                        <input asp-for="ConfirmPassword" class="form-control" />
+                                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                    </div>
+                                    <br/>
+                                    <button type="submit" class="btn btn-block">Register</button>
+                                </form>
+                                <br/>
+                                <div class="already-account">
+                                    <a asp-controller="Account" asp-action="Login">already have an account? <span class="login">&nbsp;Login</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="advertisement">
+        <div class="top-part">
+            <h1>Want to try our food?</h1>
+        </div>
+        <div class="body-part">
+            <div class="white-space"></div>
+           
+        </div>
+    </div>
+</section>
+
+@*<script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>*@
+
+
+</body>
+</html>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

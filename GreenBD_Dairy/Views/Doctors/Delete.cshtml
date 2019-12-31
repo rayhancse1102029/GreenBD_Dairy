@@ -1,0 +1,80 @@
+﻿@using Microsoft.AspNetCore.Http
+@model GreenBD_Dairy.Models.Doctors
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<html>
+<head>
+    <link href="~/css/Create-Edit-Delete-StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page-heding">
+        <marquee><p>Hello<span style="color: #ffcc00">! </span> <span style="color: #FFCC00">@@</span><span style="color: #FFCC00"> @Context.Session.GetString("username")</span> Are you sure to Delete this Doctors Record from Doctors list</p></marquee>
+    </div>
+    <div class="container">
+        <section>
+            <div class="create-form">
+                <div class="row" id="create-form-id">
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.DoctorName)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.DoctorName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.VisitFee)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.VisitFee)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Profile)
+                        </dt>
+                        <dd>
+                            <img src="data:image/jpeg;base64, @Convert.ToBase64String(Model.Profile)" class="img-responsive" width="50px" height="50px" />
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Description)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Description)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.SpecialistType)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.SpecialistType.SpecialistTypeName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ManagerSignature)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.ManagerSignature)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.EntryDate)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.EntryDate)
+                        </dd>
+                    </dl>
+                    <hr />
+                    <div>
+                        <form asp-action="Delete">
+                            <a asp-action="Index" class="btn btn-info">Back to List</a>
+                            <input type="hidden" asp-for="DoctorId" />
+                            <input type="submit" value="Delete" class="btn btn-danger" />
+                        </form>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

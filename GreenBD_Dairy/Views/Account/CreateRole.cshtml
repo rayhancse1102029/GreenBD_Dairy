@@ -1,0 +1,38 @@
+﻿@using Microsoft.AspNetCore.Http
+
+@{
+    ViewData["Title"] = "CreateRole";
+}
+<html>
+<head>
+    <style>
+        .page-heding {
+            background: rgba(232, 234, 237, 1);
+        }
+        .page-heding p {
+            font-size: 35px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: navy;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-heding">
+        <marquee><p>Welcome<span style="color: #ffcc00">! </span> <span style="color: #FFCC00">@@</span><span style="color: #FFCC00"> @Context.Session.GetString("username")</span> To Create Role Control Panel</p></marquee>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-lg-offset-4">
+            <div><h4>@ViewBag.msg</h4></div>
+            <form class="form-inline" asp-controller="Account" asp-action="CreateRole" method="post">
+                <label>Role :</label>
+                <input type="text" class="form-control" name="rolename" value="" placeholder="Please type role name..." />
+                <input type="submit" class="form-control btn btn-success" value="Create Role" />
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

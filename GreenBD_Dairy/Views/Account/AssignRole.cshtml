@@ -1,0 +1,44 @@
+﻿@using Microsoft.AspNetCore.Http
+
+@{
+    ViewData["Title"] = "AssignRole";
+}
+
+<html>
+<head>
+    <style>
+        .page-heding {
+            background: rgba(232, 234, 237, 1);
+        }
+        .page-heding p {
+            font-size: 35px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: navy;
+            font-weight: bold;
+        }
+    </style> 
+</head>
+<body>
+    <div class="page-heding">
+        <marquee><p>Welcome<span style="color: #ffcc00">! </span> <span style="color: #FFCC00">@@</span><span style="color: #FFCC00"> @Context.Session.GetString("username")</span> To Role Assign Control Panel</p></marquee>
+        <div class="row">
+            <div class="col-md-6 col-lg-offset-3">
+                <div><h4 class="text-primary">@ViewBag.msg</h4></div>
+                <form class="form-inline" asp-controller="Account" asp-action="AssignRole" method="post">
+                    <label>User Email :</label>
+                    <input type="text" class="form-control" name="useremail" value="" placeholder="Please type role name..." />
+                    <select class="form-control" name="rname">
+                        @foreach (var item in ViewBag.roles)
+                        {
+                            <option value="@item">@item</option>
+                        }
+                    </select>
+                    <input type="submit" class="form-control btn btn-success" value="Assign Role" />
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

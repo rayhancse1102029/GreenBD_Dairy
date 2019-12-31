@@ -1,0 +1,195 @@
+﻿@using Microsoft.AspNetCore.Http
+@model GreenBD_Dairy.Models.LandManagement
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<html>
+<head>
+    <link href="~/css/Create-Edit-Delete-StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page-heding">
+        <marquee><p>Hello<span style="color: #ffcc00">! </span> <span style="color: #FFCC00">@@</span><span style="color: #FFCC00"> @Context.Session.GetString("username")</span> <span style="color: red">Are you sure to Delete this Record?</span> form Land Management</p></marquee>
+    </div>
+    <div class="container">
+        <section>
+            <div class="create-form">
+                <div class="row" id="create-form-id">
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.SellerName)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.SellerName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.SellerAddress)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.SellerAddress)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Location)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Location)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.LandArea)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.LandArea)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Price)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Price)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.TotalPrice)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.TotalPrice)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.AmountSign)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.AmountSign.AmountSignName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Gender)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Gender.GenderName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.NumberSign)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.NumberSign.NumberSignName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Description)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Description)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ManagerSignature)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.ManagerSignature)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.EntryDate)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.EntryDate)
+                        </dd>
+                    </dl>
+                    <hr />
+                    <div>
+                        <form asp-action="Delete">
+                            <a asp-action="Index" class="btn btn-info">Back to List</a>
+                            <input type="hidden" asp-for="Id" />
+                            <input type="submit" value="Delete" class="btn btn-danger" />
+                        </form>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
+<div>
+    <h4>LandManagement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SellerName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SellerName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SellerAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SellerAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LandArea)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LandArea)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ManagerSignature)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ManagerSignature)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EntryDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EntryDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AmountSign)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AmountSign.AmountSignName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Gender.GenderName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberSign)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumberSign.NumberSignName)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

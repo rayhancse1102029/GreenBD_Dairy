@@ -1,0 +1,39 @@
+﻿@model GreenBD_Dairy.Models.Gender
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Gender</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GenderName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GenderName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerSignature)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OwnerSignature)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EntryDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EntryDate)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="GenderId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

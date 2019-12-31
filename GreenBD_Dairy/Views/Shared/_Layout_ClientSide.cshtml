@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GreenBD_Dairy</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+
+    </environment>
+    
+    <link href="~/Scroll btn/Scroll-bar.css" rel="stylesheet" />
+    <link href="~/FontAwsome/css/all.css" rel="stylesheet" />
+    <link href="~/css/Layout-ClientSide-StyleSheet.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <div class="navbar navbar-fixed-top navbar-default">
+        <div class="top-nav">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-8" id="phone-and-clock">
+                    <span id="phone"><i class="fas fa-phone"></i> +880 - 01952363984 &nbsp;</span> <span id="clock">
+                        <i class="fas fa-clock"></i>
+                        &nbsp; @DateTime.Now
+                    </span>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+                    <div class="social-media-icons">
+                        <a> <i style="font-size: 20px; text-align: left; padding-top: 4px;" class="fab fa-facebook-square"></i> </a>
+                        <a> <i style="font-size: 20px; text-align: left; padding-top: 4px;" class="fab fa-twitter-square"></i> </a>
+                        <a> <i style="font-size: 20px; text-align: left; padding-top: 4px;" class="fab fa-google-plus-square"></i> </a>
+                        <a> <i style="font-size: 20px; text-align: left; padding-top: 4px;" class="fab fa-linkedin"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-header">
+            <div class="row">
+                <div class="col-md-12 col-xs-10">
+                    <img id="top-logo" src="/Images/Top_logo.png" alt="image missing" class="img-responsive" />
+                </div>
+
+                <div class="col-xs-2">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+
+                <li><a id="home" asp-action="Index" asp-controller="Home">HOME</a></li>
+                <li><a asp-controller="Home" asp-action="About" id="abouts">ABOUT</a></li>
+                <li><a asp-controller="Home" asp-action="Food" id="food">FOOD</a></li>
+                <li><a asp-controller="Home" asp-action="Land" id="land">LAND</a></li>
+                <li><a asp-controller="Home" asp-action="Cow" id="cows">COWS</a></li>
+                <li><a id="worker" asp-controller="Home" asp-action="Worker">WORKER</a></li>
+                <li><a id="contact" asp-controller="Home" asp-action="Contact">CONTACT</a></li>
+                <li>  
+                    @if (User.Identity.IsAuthenticated)  
+                    {  
+                        if (User.IsInRole("Owner"))  
+                         {  
+                             <a asp-area="" asp-controller="OthersLogic" id="admin" asp-action="AdminIndex"><span style="font-size: 17px;font-family: monospace">ADMIN</span></a>  
+                         }  
+                    } 
+                    @if (User.Identity.IsAuthenticated)  
+                    {  
+                        if (User.IsInRole("Accounts"))  
+                        {  
+                            <a asp-area="" asp-controller="OthersLogic" id="admin" asp-action="AdminIndex"><span style="font-size: 17px;font-family: monospace">ADMIN</span></a>  
+                        }  
+                    }
+                    @if (User.Identity.IsAuthenticated)  
+                    {  
+                        if (User.IsInRole("Manager"))  
+                        {  
+                            <a asp-area="" asp-controller="OthersLogic" id="admin" asp-action="AdminIndex"><span style="font-size: 17px;font-family: monospace">ADMIN</span></a>  
+                        }  
+                    } 
+                    @if (User.Identity.IsAuthenticated)  
+                    {  
+                        if (User.IsInRole("Worker"))  
+                        {  
+                            <a asp-area="" asp-controller="OthersLogic" id="admin" asp-action="AdminIndex"><span style="font-size: 17px;font-family: monospace">ADMIN</span></a>  
+                        }  
+                    } 
+                </li> 
+            </ul>
+            @await Html.PartialAsync("_LoginPartial-ClientSide")
+        </div>
+    </div>
+
+    <div class="body-content">
+        @RenderBody()
+
+        <footer>
+            <section>
+                <div class="bottom-section">
+                    <div class="bottom-section-heder">
+                        <div class="container">
+                            <div class="row" id="bottom-heder-row-id">
+                                <div class="col-lg-1 col-md-1 col-sm-1 ">
+
+                                </div>
+                                @* slider one *@
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="item active">
+                                                <img src="~/Images/1-1.png" alt="image one" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/2-1.png" alt="image two" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/3-1.png" alt="image three" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/4-1.png" alt="image three" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/5-1.png" alt="image three" class="img-responsive" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @*slider two*@
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="item active">
+                                                <img src="~/Images/2-1.png" alt="image one" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/3-1.png" alt="image two" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/4-1.png" alt="image three" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/5-1.png" alt="image three" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/1-1.png" alt="image three" class="img-responsive" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @*slider three*@
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="item active">
+                                                <img src="~/Images/3-1.png" alt="image one" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/4-1.png" alt="image two" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/5-1.png" alt="image three" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/1-1.png" alt="image three" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/2-1.png" alt="image three" class="img-responsive" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @*slider four*@
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="item active">
+                                                <img src="~/Images/4-1.png" alt="image one" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/5-1.png" alt="image two" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/1-1.png" alt="image three" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/2-1.png" alt="image three" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/3-1.png" alt="image three" class="img-responsive" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @*slider five*@
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="item active">
+                                                <img src="~/Images/5-1.png" alt="image one" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/1-1.png" alt="image two" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/2-1.png" alt="image three" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/3-1.png" alt="image three" class="img-responsive" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="~/Images/4-1.png" alt="image three" class="img-responsive" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-1 col-md-1 col-sm-1">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-section-body">
+                        <div class="container">
+                            <div class="bottom-section-body-heading">
+                                <div class="row" id="bottom-section-body-row-id">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <h1> Where to Buy </h1>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <h5>
+                                            Our products are currently available at select retailers in Connecticut and New York.
+                                        </h5>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="bottom-section-button">
+                                            <button class="btn btn-default" id="BottomSectionBodyHedingButton">
+                                                STORE &nbsp; LOCATORE
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br /><br />
+                            <hr />
+                            <br /><br />
+                            <div class="bottom-section-body-body">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="bottom-section-body-body-iteams">
+
+                                            <h1> On the Farm </h1>
+                                            <a><b> Meet Our Farmers </b></a> <br />
+                                            <a><b> Meet the Cows </b></a> <br />
+                                            <a><b> Famous Dairy Facts </b></a> <br />
+                                            <a><b> From the Farm to the Fridge </b></a> <br />
+                                            <a><b> Dairy Farm Map </b></a> <br />
+                                            <a><b> Farm Practices </b></a> <br />
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="bottom-section-body-body-iteams">
+
+                                            <h1> In the Kitchen </h1>
+                                            <a><b> Recipes </b></a> <br />
+                                            <a><b> Lactose Intolerance </b></a> <br />
+                                            <a><b> Milk Imitators </b></a> <br />
+                                            <a><b> Organic Milk </b></a> <br />
+                                            <a><b> Flavored Milk </b></a> <br />
+                                            <a><b> Ask Our Dietitian </b></a> <br />
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="bottom-section-body-body-iteams">
+
+                                            <h1> In the News </h1>
+                                            <a><b> Local Milk Blog </b></a> <br />
+                                            <a><b> Contests/Sweepstakes </b></a> <br />
+                                            <a><b> Videos </b></a> <br />
+                                            <a><b> News Releases </b></a> <br />
+                                            <a><b> Newsletters </b></a> <br />
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="bottom-section-body-body-iteams">
+
+                                            <h1> About Us </h1>
+                                            <a><b> FAQ </b></a> <br />
+                                            <a><b> Our Board </b></a> <br />
+                                            <a><b> Our Staff </b></a> <br />
+                                            <a><b> Contact Us </b></a> <br />
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="bottom-section-bottom">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <img src="~/Images/Logo.png" class="img-responsive img-circle" />
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="Contact">
+                                            <p>
+                                                <b>
+                                                    888 Broadway, New York, NY, 18813 <br />
+                                                    <span style="color: #fdc221"> Phone: 123-456-7890 </span> <br />
+                                                    Fax: 123-456-7890 <br />
+                                                    Email: info@yoursite.com <br />
+                                                </b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3">
+
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="social-media-icon">
+                                            <a> <i class="fab fa-facebook-square"></i> </a>
+                                            <a> <i class="fab fa-twitter-square"></i> </a>
+                                            <a> <i class="fab fa-google-plus-square"></i> </a>
+                                            <a> <i class="fab fa-linkedin"></i> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <hr />
+            <div class="developer-info">
+                <p> @DateTime.Now.Year - Designed & Developed by <a id="developer-link"> @@Rayhan</a> </p>
+            </div>
+        </footer>
+        <a href="javascript:" id="return-to-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+
+    <script src="~/Scroll btn/Scroll-bar.js"></script>
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

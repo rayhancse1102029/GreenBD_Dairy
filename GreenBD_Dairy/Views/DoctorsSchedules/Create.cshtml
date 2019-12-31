@@ -1,0 +1,83 @@
+﻿@using Microsoft.AspNetCore.Http
+@model GreenBD_Dairy.Models.DoctorsSchedule
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<html>
+<head>
+    <link href="~/css/Create-Edit-Delete-StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="page-heding">
+        <marquee><p>Welcome<span style="color: #ffcc00">! </span> <span style="color: #FFCC00">@@</span><span style="color: #FFCC00"> @Context.Session.GetString("username")</span> for Creating a new Schedule for Doctors</p></marquee>
+    </div>
+    <div class="container">
+        <section>
+            <div class="create-form">
+                <div class="row" id="create-form-id">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="DoctorId" class="control-label"></label>
+                                    <select asp-for="DoctorId" class="form-control" asp-items="ViewBag.DoctorId">
+                                        <option value="">----Select Doctor----</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="DayId" class="control-label"></label>
+                                    <select asp-for="DayId" class="form-control" asp-items="ViewBag.DayId">
+                                        <option value="">----Select Day----</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="Time" class="control-label"></label>
+                                    <input asp-for="Time" class="form-control" />
+                                    <span asp-validation-for="Time" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="ManagerSignature" class="control-label"></label>
+                                    <input asp-for="ManagerSignature" type="text" value="@Context.Session.GetString("username")" class="form-control" />
+                                    <span asp-validation-for="ManagerSignature" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label asp-for="EntryDate" class="control-label"></label>
+                                    <input asp-for="EntryDate" type="text" value="@DateTime.Now" class="form-control" />
+                                    <span asp-validation-for="EntryDate" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+                            </div>
+                        </div>
+                        <br/>
+                        <input type="submit" value="Create" id="create-btn-right" class="btn btn-success" />
+                    </form>
+                    <div>
+                        <a asp-action="Index" class="btn btn-info">Back to List</a>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,135 @@
+﻿@using Microsoft.AspNetCore.Http
+@model PaginatedList<GreenBD_Dairy.Models.Transport>
+
+@{
+    ViewData["Title"] = "Index";
+    int i = 1;
+    int cp = Model.PageIndex;
+    int tp = Model.TotalPages;
+    i = (cp - 1) * 10 + 1;
+}
+@{
+    ViewData["Title"] = "Index";
+}
+
+<html>
+<head>
+
+    <link href="~/css/Create-Edit-Delete-StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="page-heding">
+        <marquee><p>Welcome<span style="color: #ffcc00">! </span> <span style="color: #FFCC00">@@</span><span style="color: #FFCC00"> @Context.Session.GetString("username")</span> To Transport Control Panel</p></marquee>
+    </div>
+    <br />
+    <div class="sub-index-page">
+        <div class="function-part">
+            <form asp-action="Index" method="get" class="form-inline">
+                <a asp-action="Create" id="index-create-btn-id" class="btn btn-info">Create New</a>
+                <div class="form-group">
+                    <input id="myInput" type="text" name="srctext" class="form-control" value="@ViewBag.srctext" placeholder=" Search in word...." />
+                    <input id="src-btn" type="submit" class="btn btn-success" value="Search" />
+                </div>
+                <div class="form-group">
+                    <h4 class="text-danger">Total result : @ViewBag.TotalCount</h4>
+                </div>
+            </form>
+        </div>
+        <hr />
+        <table class="table table-responsive table-striped table-hover table-bordered">
+            <thead>
+                 <tr>
+                    <th>
+                        ID
+                    </th>
+                     <th>
+                       Transport Type
+                    </th>
+                    <th>
+                       Uses for
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Manager Signature
+                    </th>
+                    <th>
+                        Entry Date
+                    </th>
+                    <th></th>
+                </tr>
+        </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TransportType.TransportTypeName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UsesFor)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ManagerSignature)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EntryDate)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        @{
+            var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+            var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+        }
+        <a asp-action="Index"
+           asp-route-sortOrder="@ViewBag.sortOrder"
+           asp-route-page=@(Model.PageIndex-1)
+           class="btn btn-info @prevDisabled">Previous</a>
+
+        @{
+            var start = cp - 5;
+            var end = cp + 5;
+            for (int j = start; j <= end; j++)
+            {
+                if (j > 0 && j <= tp)
+                {
+                    if (cp == j)
+                    {
+                        <a asp-action="Index"
+                           asp-route-sortOrder="@ViewBag.sortOrder"
+                           asp-route-page=@j
+                           class="btn btn-danger @nextDisabled">@j</a>
+                    }
+                    else
+                    {
+                        <a asp-action="Index"
+                           asp-route-sortOrder="@ViewBag.sortOrder"
+                           asp-route-page=@j
+                           class="btn btn-info @nextDisabled">@j</a>
+                    }
+                }
+            }
+        }
+
+        <a asp-action="Index"
+           asp-route-sortOrder="@ViewBag.sortOrder"
+           asp-route-page=@(Model.PageIndex+1)
+           class="btn btn-info @nextDisabled">Next</a>
+    </div>
+</body>
+</html>

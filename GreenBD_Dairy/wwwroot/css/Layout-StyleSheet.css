@@ -1,0 +1,41 @@
+﻿
+
+#top-logo {
+    height: 55px;
+}
+.dropdown-menu {
+    background: black;
+}
+.dropdown-menu li a {
+    color: gray;
+            
+}
+#profile {
+    padding-left: 150px;
+}
+#profile-dropdown {
+    margin-left: 200px;
+}
+ .developer-info {
+
+     background: #181516;
+     width: 100%;
+     height: 50px;
+     margin-top: -50px;
+ }
+ .developer-info p {
+     text-align: center;
+     padding-top: 20px;
+     color: gray;
+  
+ }
+ #developer-link {
+
+     color: white;
+ }
+ #developer-link:hover {
+     color: #fdc221;
+ }
+ footer {
+     margin-top: 150px;
+ }

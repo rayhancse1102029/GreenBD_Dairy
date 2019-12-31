@@ -1,0 +1,20 @@
+﻿
+ .page-banner {
+     overflow: hidden;
+     height: 700px;
+     background-image: url('/images/other img/page-banner.jpg');
+ }
+ .over {
+     overflow: hidden;
+     height: 700px;
+     background: rgba(0, 0, 0, 0.5);
+     margin-top: -700px;
+ }
+ .over h1 {
+     overflow: hidden;
+     text-align: center;
+     color: whitesmoke;
+     font-weight: bold;
+     padding-top: 300px;
+     font-size: 80px;
+ }

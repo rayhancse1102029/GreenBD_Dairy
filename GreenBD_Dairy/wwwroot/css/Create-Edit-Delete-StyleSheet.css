@@ -1,0 +1,75 @@
+﻿
+
+/*page hedding part*/
+
+
+.page-heding {
+    background: rgba(232, 234, 237, 1);
+}
+.page-heding p {
+    font-size: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: navy;
+    font-weight: bold;
+}
+
+/*page index*/
+
+.sub-index-page {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#index-create-btn-id {
+    font-size: 15px;
+    padding: 12px 30px 12px 30px;
+}
+.function-part {
+    display: inline;
+}
+#src-btn {
+    background: #449D44;
+    font-size: 20px;
+
+}
+#myInput {
+    background: whitesmoke;
+    border: 2px solid #66AFE9;
+    color: black;
+    width: 250px;
+}
+thead {
+    background: #ffcc00;
+}
+
+/*create form [ it's also use for Edit, Detials, Delete ]*/
+
+.create-form {
+    border: 30px solid navy;
+    border-top: 40px solid navy;
+    background: black;
+    color: white;
+    border-radius: 60px;
+    margin-top: 5px;
+}
+#create-form-id {
+    margin: 50px 15px 20px 15px;
+}
+.form-group input, .form-group select {
+    background: none ;
+    color: white;
+}
+.form-control option {
+    background: navy;
+    text-align: center;
+}
+.form-control {
+    height: 45px;
+    border: 2px solid white;
+}
+#create-btn-right {
+    float: right;
+    width: 155px;
+    font-size: 25px;
+    font-weight: bold;
+}
